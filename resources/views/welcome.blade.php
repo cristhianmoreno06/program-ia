@@ -13,38 +13,33 @@
 <div class="">
     <div class="card">
         <div class="card-header">
-            Featured
+           Parcial Segundo Corte
         </div>
         <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
+            <h5 class="card-title">Tabla de Algoritmos-Geneticos</h5>
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Individuo</th>
+                    <th scope="col">Decimal</th>
+                    <th scope="col">Valor Adaptacion</th>
+                    <th scope="col">Probabilidad</th>
+                    <th scope="col">Q</th>
+                    <th scope="col">Quartiles</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+
+                @foreach($view as $data)
+                    <tr>
+                        <td>Individuo {{$data->id}}</td>
+                        <td>{{$data->decimal}}</td>
+                        <td>{{$data->adaptacion}}</td>
+                        <td>{{$data->probabilidad}}</td>
+                        <td>{{$data->q}}</td>
+                        <td>Q {{$data->id}}</td>
+                    </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>

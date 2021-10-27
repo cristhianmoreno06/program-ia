@@ -13,7 +13,7 @@ class CreateTableChromosomes extends Migration
      */
     public function up()
     {
-        Schema::create('table_chromosomes', function (Blueprint $table) {
+        Schema::create('chromosomes', function (Blueprint $table) {
             $table->id();
             $table->integer('number_chromosomes')->comment('Estándar de Número de cromosomas');
             $table->timestamps();

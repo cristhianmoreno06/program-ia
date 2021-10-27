@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableBits extends Migration
+class CreateTotal extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateTableBits extends Migration
      */
     public function up()
     {
-        Schema::create('bits', function (Blueprint $table) {
+        Schema::create('totals', function (Blueprint $table) {
             $table->id();
-            $table->integer('number_bits')->comment('Estándar de Número de bits');
+            $table->double('decimal');
+            $table->double('adaptacion');
+            $table->double('probabilidad');
+            $table->double('q');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ class CreateTableBits extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_bits');
+        Schema::dropIfExists('total');
     }
 }

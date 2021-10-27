@@ -26,7 +26,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $value_17
  * @property int $value_18
  */
-class Person extends Model
+class PersonIa extends Model
 {
     protected $fillable = [
         'person',
